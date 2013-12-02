@@ -1,0 +1,44 @@
+﻿@model AdventurousContacts.Models.Contact
+
+<div id="contactForm">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ContactID)
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailAddress)
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+
+        <div id="submitButton">
+            <input type="submit" value="Create" />
+        </div>
+    }
+    <div>
+        @Html.ActionLink("Tillbaka", "Index")
+    </div>
+</div>

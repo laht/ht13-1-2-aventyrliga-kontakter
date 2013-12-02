@@ -1,0 +1,26 @@
+﻿@model AdventurousContacts.Models.Contact
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sparad!</title>
+</head>
+<body>
+    <div>
+        <h1>Sparningen lyckades</h1>
+        <div id="savedContact">
+            <p>
+                @Model.FirstName @Model.LastName (@Model.EmailAddress) har sparats!
+            </p>
+            <div>
+                @Html.ActionLink("Tillbaka", "Index")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

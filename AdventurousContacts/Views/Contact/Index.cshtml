@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AdventurousContacts.Models.Contact>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Äventyrliga kontakte</title>
+        <link href="~/Content/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="main">
+            <h1>Äventyrliga kontakter</h1>
+            <div id="newContactLink">
+                @Html.ActionLink("Skapa ny kontakt", "Create")
+            </div>            
+            <div id="contacts">
+                @foreach (var item in Model)
+                {
+                    <div class="contact-card">
+                        <p>
+                            @item.FirstName
+                        </p>
+                        <p>
+                            @item.LastName
+                        </p>
+                        <p>
+                            @item.EmailAddress
+                        </p>
+                        <div class="edit-details">
+                            @Html.ActionLink("Redigera", "Edit", new { id = item.ContactID })
+                            @Html.ActionLink("Ta bort", "Delete")
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                }
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
