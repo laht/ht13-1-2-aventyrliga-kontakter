@@ -49,7 +49,7 @@ namespace AdventurousContacts.Controllers
                 {
                     _repository.Add(contact);
                     _repository.Save();
-                    return View("Success");
+                    return View("Created", contact);
                 }
                 catch (Exception)
                 {
@@ -59,7 +59,7 @@ namespace AdventurousContacts.Controllers
 
             return View();
         }
-
+        //Return delete page
         public ActionResult Delete(int id = 0)
         {
             var contact = _repository.GetContactById(id);
@@ -69,27 +69,32 @@ namespace AdventurousContacts.Controllers
             }
             return View("Delete", contact);
         }
+        //If delete is confirmed
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
+            //Get contact to delete
             var contact = _repository.GetContactById(id);
             try
             {
+                //Delete contact
                 _repository.Delete(contact);
                 _repository.Save();
             }
             catch (Exception)
             {
                 ModelState.AddModelError(String.Empty, "Ett fel inträffade när en kontakt skulle tas bort");
+                return View("Delete", contact);
             }
-            return View();
+
+            return View("Deleted", contact);
         }
-        public override void Dispose(bool disposing)
+        //Dispose of database resources
+        protected override void Dispose(bool disposing)
         {
             _repository.Dispose();
             base.Dispose(disposing);
         }
-
         //Return edit page
         [HttpGet]
         public ActionResult Edit(int id = 0)

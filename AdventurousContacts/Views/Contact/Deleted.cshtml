@@ -8,20 +8,20 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <title>Borttagning lyckades!</title>
     <link href="~/Content/style.css" rel="stylesheet" />
-    <title>Sparad!</title>
 </head>
 <body>
     <div id="main">
-        <h1>Sparningen lyckades</h1>
-        <div id="sucessBox">
+        <div id="successBox">
+            <h1>Borttagning lyckades!</h1>
             <p>
-                @Model.FirstName @Model.LastName (@Model.EmailAddress) har sparats!
+                @Model.FirstName @Model.LastName (@Model.EmailAddress) har tagits bort
             </p>
             <div>
                 @Html.ActionLink("Tillbaka", "Index")
             </div>
         </div>
-    </div>
+    </div>    
 </body>
 </html>

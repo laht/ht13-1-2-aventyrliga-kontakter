@@ -1,5 +1,4 @@
-﻿@model AdventurousContacts.Models.Contact
-@{
+﻿@{
     Layout = null;
 }
 
@@ -8,15 +7,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <title>NotFound</title>
     <link href="~/Content/style.css" rel="stylesheet" />
-    <title>Sparad!</title>
 </head>
 <body>
     <div id="main">
-        <h1>Sparningen lyckades</h1>
-        <div id="sucessBox">
+        <h1>404</h1>
+        <div id="errorBox">            
             <p>
-                @Model.FirstName @Model.LastName (@Model.EmailAddress) har sparats!
+                Kunde inte hitta den angivna resursen
             </p>
             <div>
                 @Html.ActionLink("Tillbaka", "Index")

@@ -13,18 +13,18 @@ namespace AdventurousContacts.Models.Repository
         #region IDisposable
         public void Dispose()
         {
-            Dispose();
-            GC.SuppressFinalize(this);
+            Dispose(true);
         }
-        public virtual void Dipose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
-            if (!this._disposed)
+            if (!_disposed)
             {
                 if (disposing)
                 {
                     _entities.Dispose();
                 }
             }
+            _disposed = true;
         }
         #endregion
 

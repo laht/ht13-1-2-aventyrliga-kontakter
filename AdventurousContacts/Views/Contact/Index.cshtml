@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width" />
-        <title>Äventyrliga kontakte</title>
+        <title>Äventyrliga kontakter</title>
         <link href="~/Content/style.css" rel="stylesheet" />
     </head>
     <body>
@@ -33,7 +33,7 @@
                         </p>
                         <div class="edit-details">
                             @Html.ActionLink("Redigera", "Edit", new { id = item.ContactID })
-                            @Html.ActionLink("Ta bort", "Delete")
+                            @Html.ActionLink("Ta bort", "Delete", new { id = item.ContactID })
                         </div>
                         <div class="clearfix">
                         </div>

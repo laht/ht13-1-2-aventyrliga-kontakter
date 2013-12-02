@@ -1,0 +1,30 @@
+﻿@model AdventurousContacts.Models.Contact
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>created</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div id="main">
+            <h1>Sparningen lyckades</h1>
+            <div id="successBox">
+                <p>
+                    @Model.FirstName @Model.LastName (@Model.EmailAddress) har skapats!
+                </p>
+                <div>
+                    @Html.ActionLink("Tillbaka", "Index")
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

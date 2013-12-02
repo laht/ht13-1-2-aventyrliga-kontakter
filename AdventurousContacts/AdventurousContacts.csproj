@@ -262,11 +262,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\Create.cshtml" />
-    <Content Include="Views\Contact\Success.cshtml" />
     <Content Include="Views\Contact\Edit.cshtml" />
     <Content Include="Views\Contact\_ContactForm.cshtml" />
     <Content Include="Views\Contact\Saved.cshtml" />
     <Content Include="Views\Contact\Delete.cshtml" />
+    <Content Include="Views\Contact\created.cshtml" />
+    <Content Include="Views\Contact\Deleted.cshtml" />
+    <Content Include="Views\Contact\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
