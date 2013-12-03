@@ -1,24 +1,10 @@
 ﻿@model AdventurousContacts.Models.Contact
 
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml"; ;
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Redigera kontakt</title>
-</head>
-<body>
-    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <link href="~/Content/style.css" rel="stylesheet" />
-    <div id="main">
-        <h1>Redigera kontakt</h1>
-        @Html.Partial("_ContactForm")
-    </div> 
-</body>
-</html>
+<div id="main">
+    <h1>Redigera kontakt</h1>
+    @Html.Partial("_ContactForm")
+</div> 

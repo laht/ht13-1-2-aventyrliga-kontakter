@@ -1,0 +1,27 @@
+﻿@using AdventurousContacts.Controllers;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NotFound</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="main">
+        <h1>404</h1>
+        <div id="errorBox">            
+            <p>
+                Kunde inte hitta den angivna resursen
+            </p>
+            <div>
+                @Html.ActionLink("Tillbaka", "Index", "Contact")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

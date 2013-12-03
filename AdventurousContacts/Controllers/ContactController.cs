@@ -102,7 +102,7 @@ namespace AdventurousContacts.Controllers
             var contact = _repository.GetContactById(id);
             if (contact == null)
             {
-                return View("NotFound");
+                return View("EditError");
             }
 
             return View("Edit", contact);
